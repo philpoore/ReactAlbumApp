@@ -1,0 +1,11 @@
+. | {
+	_id: .id,
+	title: .name,
+	image: .images[0].url,
+	tracks: [
+		.tracks.items[] | {
+			name: .name,
+			duration: .duration_ms
+		}
+	]
+}
